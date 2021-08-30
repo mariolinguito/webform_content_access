@@ -1,0 +1,6 @@
+webform_content_access.default_form:
+  title: 'Webform Content Access'
+  route_name: webform_content_access.default_form
+  description: 'Manage content types and fields to lock with webform.'
+  parent: system.admin_config_system
+  weight: 99

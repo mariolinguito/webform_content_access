@@ -1,0 +1,17 @@
+webform_content_access.get_my_contents:
+ path: 'api/webform/contents'
+ defaults:
+   _controller: '\Drupal\webform_content_access\Controller\RestController::getMyContents'
+ methods: [GET]
+ requirements:
+   _access: 'TRUE'
+
+webform_content_access.default_form:
+  path: '/admin/config/webform_content_access/default'
+  defaults:
+    _form: '\Drupal\webform_content_access\Form\DefaultForm'
+    _title: 'DefaultForm'
+  requirements:
+    _permission: 'access administration pages'
+  options:
+    _admin_route: TRUE

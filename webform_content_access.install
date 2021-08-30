@@ -1,0 +1,37 @@
+<?php
+
+/**
+ * Creates the tables using the schema API.
+*/
+function webform_content_access_schema() {
+  $schema['webform_content_access_track'] = [
+    'description' => 'Tracking for content access with webform submissions.',
+    'fields' => [
+      'id' => [
+        'description' => 'ID of the row.',
+        'type' => 'serial',
+        'not null' => true,
+      ],
+
+      'id_user' => [
+        'description' => 'ID of the user.',
+        'type' => 'int',
+        'unsigned' => true,
+        'not null' => true,
+        'default' => 0,
+      ],
+
+      'id_content' => [
+        'description' => 'ID of the content.',
+        'type' => 'int',
+        'unsigned' => true,
+        'not null' => true,
+        'default' => 0,
+      ],
+    ],
+
+    'primary key' => ['id', 'id_user', 'id_content'],
+  ];
+
+  return $schema;
+}

@@ -1,0 +1,5 @@
+name: 'Webform Content Access'
+type: module
+description: 'This module provide the possibility to create private content accessible only after webform submit.'
+core: 8.x
+package: 'Custom'
